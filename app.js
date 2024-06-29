@@ -27,7 +27,7 @@ const authMiddleware = require("./middleware/authMiddleware");
 
 //* json middleware to extract json data
 app.use(express.json());
-console.log("test 2")
+//console.log("test 2")
 //* user routes middleware
 app.use("/api/users", userRoutes);
 //* questions routes middleware ??
@@ -39,7 +39,7 @@ app.use("/api/answers", authMiddleware, answerRoute);
 
 async function start() {
   try {
-    console.log("object")
+    //console.log("object")
     const result = await dbConnection.execute("select 'test'");
     console.log(result)
     await app.listen(port);
